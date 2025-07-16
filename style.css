@@ -1,0 +1,199 @@
+/* General Body & Typography */
+body {
+    font-family: 'Roboto Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; /* Monospaced for a code/digital feel */
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px;
+    background-color: #1a1a2e; /* Dark, deep blue background */
+    color: #e0e0e0; /* Light grey text for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header */
+header {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(70, 190, 255, 0.2); /* Subtle blue line */
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 400; /* Lighter weight */
+    color: #8cffb4; /* Bright green for headings, like active signal */
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(140, 255, 180, 0.3); /* Subtle glow */
+}
+
+/* Main Grid Layout */
+main {
+    max-width: 1400px; /* Wider main container */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px; /* More space between semesters */
+}
+
+/* Semester Sections */
+.semester {
+    background: rgba(26, 26, 46, 0.7); /* Slightly transparent dark background for sections */
+    backdrop-filter: blur(5px); /* Subtle blur effect */
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(70, 190, 255, 0.1); /* Light blue border */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* Adding subtle 'circuit board' lines or dots */
+    background-image:
+        radial-gradient(circle at 10% 10%, rgba(70, 190, 255, 0.05) 1px, transparent 1px),
+        radial-gradient(circle at 90% 90%, rgba(70, 190, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.semester h2 {
+    font-size: 1.8em;
+    font-weight: 500;
+    color: #46beff; /* Bright blue for semester titles */
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 1px dashed rgba(70, 190, 255, 0.3); /* Dashed blue separator */
+    padding-bottom: 18px;
+    text-shadow: 0 0 5px rgba(70, 190, 255, 0.2);
+}
+
+/* Course Cards */
+.course {
+    background: rgba(45, 45, 75, 0.8); /* Slightly lighter dark background for courses */
+    margin-bottom: 15px;
+    padding: 18px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(70, 190, 255, 0.1); /* Subtle blue border */
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.course:last-child {
+    margin-bottom: 0;
+}
+
+.course:hover {
+    background-color: rgba(60, 60, 95, 0.9); /* Darker on hover */
+    border-color: #46beff; /* Brighter blue border on hover */
+    transform: translateY(-3px); /* Subtle lift */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4), 0 0 15px rgba(70, 190, 255, 0.3); /* Enhanced glow/shadow */
+}
+
+.course h3 {
+    margin: 0;
+    font-size: 1.15em;
+    font-weight: 400;
+    color: #c0c0e0; /* Softer light color for titles */
+    letter-spacing: 0.5px;
+}
+
+/* Prerequisite Info */
+.prereq-info {
+    font-size: 0.85em;
+    color: #99aacc; /* Slightly faded blue-grey */
+    margin-top: 10px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease-out, max-height 0.4s ease-out, padding-top 0.4s ease-out;
+    padding-top: 0;
+}
+
+/* Active (Clicked) Course State */
+.course.active {
+    background-color: rgba(70, 190, 255, 0.2); /* Light blue highlight */
+    border-color: #46beff; /* Bright blue border */
+    box-shadow: 0 0 0 2px rgba(70, 190, 255, 0.5), 0 0 20px rgba(70, 190, 255, 0.4); /* Stronger blue glow */
+}
+
+.course.active .prereq-info {
+    opacity: 1;
+    max-height: 60px; /* Adjust based on content */
+    padding-top: 8px; /* More padding when visible */
+}
+
+/* Course states for interactivity (updated colors) */
+.course.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    background-color: rgba(30, 30, 50, 0.8); /* Darker disabled state */
+    border-color: rgba(70, 190, 255, 0.05);
+    box-shadow: none;
+    transform: none;
+}
+
+.course.disabled h3,
+.course.disabled .prereq-info {
+    color: #666; /* Even more faded */
+}
+
+.course.completed {
+    background-color: rgba(50, 100, 70, 0.6); /* Deeper green for completed courses */
+    border-color: #8cffb4; /* Bright green border */
+    box-shadow: 0 0 0 2px rgba(140, 255, 180, 0.3), 0 0 15px rgba(140, 255, 180, 0.2); /* Green glow */
+    position: relative;
+    cursor: pointer; /* Still clickable to unmark */
+    opacity: 1; /* Ensure full opacity */
+}
+
+/* Checkmark for completed courses (updated color) */
+.course.completed::after {
+    content: '✓'; /* Unicode checkmark character */
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.8em; /* Slightly larger */
+    color: #8cffb4; /* Bright green checkmark */
+    pointer-events: none;
+    text-shadow: 0 0 8px rgba(140, 255, 180, 0.5); /* Glowing checkmark */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    main {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    .semester {
+        padding: 25px;
+    }
+    .semester h2 {
+        font-size: 1.5em;
+    }
+    .course {
+        padding: 15px 18px;
+    }
+    .course.completed::after {
+        right: 15px;
+        font-size: 1.4em;
+    }
+}

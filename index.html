@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular - Redes y Telecomunicaciones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Malla Curricular: Ing. Redes y Telecomunicaciones</h1>
+    </header>
+
+    <main id="studyPlan">
+        <section class="semester">
+            <h2>1° Semestre</h2>
+            <div class="course" data-prereq="">
+                <h3>Calculo 1</h3>
+                <p class="prereq-info">Sin requisitos.</p>
+            </div>
+            <div class="course" data-prereq="">
+                <h3>Estructuras Discretas</h3>
+                <p class="prereq-info">Sin requisitos.</p>
+            </div>
+            <div class="course" data-prereq="">
+                <h3>Int. a la Informática</h3>
+                <p class="prereq-info">Sin requisitos.</p>
+            </div>
+            <div class="course" data-prereq="">
+                <h3>Física 1</h3>
+                <p class="prereq-info">Sin requisitos.</p>
+            </div>
+            <div class="course" data-prereq="">
+                <h3>Inglés 1</h3>
+                <p class="prereq-info">Sin requisitos.</p>
+            </div>
+        </section>
+
+        <section class="semester">
+            <h2>2° Semestre</h2>
+            <div class="course" data-prereq="Calculo 1">
+                <h3>Calculo 2</h3>
+                <p class="prereq-info">Requiere: Calculo 1</p>
+            </div>
+            <div class="course" data-prereq="Estructuras Discretas">
+                <h3>Alge. Lineal</h3>
+                <p class="prereq-info">Requiere: Estructuras Discretas</p>
+            </div>
+            <div class="course" data-prereq="Int. a la Informática">
+                <h3>Program 1</h3>
+                <p class="prereq-info">Requiere: Int. a la Informática</p>
+            </div>
+            <div class="course" data-prereq="Física 1">
+                <h3>Física 2</h3>
+                <p class="prereq-info">Requiere: Física 1</p>
+            </div>
+            <div class="course" data-prereq="Inglés 1">
+                <h3>Inglés 2</h3>
+                <p class="prereq-info">Requiere: Inglés 1</p>
+            </div>
+        </section>
+
+        <section class="semester">
+            <h2>3° Semestre</h2>
+            <div class="course" data-prereq="Calculo 2">
+                <h3>Ecuaciones Diferenciales</h3>
+                <p class="prereq-info">Requiere: Calculo 2</p>
+            </div>
+            <div class="course" data-prereq="Alge. Lineal, Program 1">
+                <h3>Program 2</h3>
+                <p class="prereq-info">Requiere: Alge. Lineal, Program 1</p>
+            </div>
+            <div class="course" data-prereq="Program 1, Física 2">
+                <h3>Arquit. Computacional</h3>
+                <p class="prereq-info">Requiere: Program 1, Física 2</p>
+            </div>
+            <div class="course" data-prereq="Física 2">
+                <h3>Análisis de Circuitos</h3>
+                <p class="prereq-info">Requiere: Física 2</p>
+            </div>
+            <div class="course" data-prereq="Física 2">
+                <h3>Teoría de Campo</h3>
+                <p class="prereq-info">Requiere: Física 2</p>
+            </div>
+        </section>
+
+        <section class="semester">
+            <h2>4° Semestre</h2>
+            <div class="course" data-prereq="Ecuaciones Diferenciales">
+                <h3>Met. Numéricos</h3>
+                <p class="prereq-info">Requiere: Ecuaciones Diferenciales</p>
+            </div>
+            <div class="course" data-prereq="Calculo 2">
+                <h3>Prob. Estadística 1</h3>
+                <p class="prereq-info">Requiere: Calculo 2</p>
+            </div>
+            <div class="course" data-prereq="Program 2, Calculo 1">
+                <h3>Estructura de Datos</h3>
+                <p class="prereq-info">Requiere: Program 2, Calculo 1</p>
+            </div>
+            <div class="course" data-prereq="Arquit. Computacional">
+                <h3>Prog. Ensamblador</h3>
+                <p class="prereq-info">Requiere: Arquit. Computacional</p>
+            </div>
+            <div class="course" data-prereq="Análisis de Circuitos">
+                <h3>Anal. Cir. Eléctricos</h3>
+                <p class="prereq-info">Requiere: Análisis de Circuitos</p>
+            </div>
+        </section>
+
+        <section class="semester">
+            <h2>5° Semestre</h2>
+            <div class="course" data-prereq="Prob. Estadística 1">
+                <h3>Prob. Estadística 2</h3>
+                <p class="prereq-info">Requiere: Prob. Estadística 1</p>
+            </div>
+            <div class="course" data-prereq="Estructura de Datos">
+                <h3>Base de Datos 1</h3>
+                <p class="prereq-info">Requiere: Estructura de Datos</p>
+            </div>
+            <div class="course" data-prereq="Anal. Cir. Eléctricos">
+                <h3>Elec. Ap. Redes</h3>
+                <p class="prereq-info">Requiere: Anal. Cir. Eléctricos</p>
+            </div>
+            <div class="course" data-prereq="Anal. Cir. Eléctricos">
+                <h3>Sis. Log. Digital 1</h3>
+                <p class="prereq-info">Requiere: Anal. Cir. Eléctricos</p>
+            </div>
+            <div class="course" data-prereq="Teoría de Campo, Ecuaciones Diferenciales">
+                <h3>Señales y Sistema</h3>
+                <p class="prereq-info">Requiere: Teoría de Campo, Ecuaciones Diferenciales</p>
+            </div>
+        </section>
+
+        <section class="semester">
+            <h2>6° Semestre</h2>
+            <div class="course" data-prereq="Prob. Estadística 2">
+                <h3>Inv. Operat. 1</h3>
+                <p class="prereq-info">Requiere: Prob. Estadística 2</p>
+            </div>
+            <div class="course" data-prereq="Base de Datos 1">
+                <h3>Base de Datos 2</h3>
+                <p class="prereq-info">Requiere: Base de Datos 1</p>
+            </div>
+            <div class="course" data-prereq="Elec. Ap. Redes">
+                <h3>Sist. Operat 1</h3>
+                <p class="prereq-info">Requiere: Elec. Ap. Redes</p>
+            </div>
+            <div class="course" data-prereq="Sis. Log. Digital 1">
+                <h3>Sis. Log. Digital 2</h3>
+                <p class="prereq-info">Requiere: Sis. Log. Digital 1</p>
+            </div>
+            <div class="course" data-prereq="Señales y Sistema, Met. Numéricos">
+                <h3>Int. Sis. Señales</h3>
+                <p class="prereq-info">Requiere: Señales y Sistema, Met. Numéricos</p>
+            </div>
+        </section>
+
+        <section class="semester">
+            <h2>7° Semestre</h2>
+            <div class="course" data-prereq="Inv. Operat. 1">
+                <h3>Inv. Operat. 2</h3>
+                <p class="prereq-info">Requiere: Inv. Operat. 1</p>
+            </div>
+            <div class="course" data-prereq="Sist. Operat 1">
+                <h3>Sist. Operat 2</h3>
+                <p class="prereq-info">Requiere: Sist. Operat 1</p>
+            </div>
+            <div class="course" data-prereq="Sist. Operat 1, Señales y Sistema">
+                <h3>Redes 1</h3>
+                <p class="prereq-info">Requiere: Sist. Operat 1, Señales y Sistema</p>
+            </div>
+            <div class="course" data-prereq="Sis. Log. Digital 2, Prog. Ensamblador">
+                <h3>Aplic. Microp.</h3>
+                <p class="prereq-info">Requiere: Sis. Log. Digital 2, Prog. Ensamblador</p>
+            </div>
+            <div class="course" data-prereq="Int. Sis. Señales, Señales y Sistema">
+                <h3>Sis. de Compu 1</h3>
+                <p class="prereq-info">Requiere: Int. Sis. Señales, Señales y Sistema</p>
+            </div>
+        </section>
+
+        <section class="semester">
+            <h2>8° Semestre</h2>
+            <div class="course" data-prereq="Inv. Operat. 2">
+                <h3>Prep. Eval. Proy.</h3>
+                <p class="prereq-info">Requiere: Inv. Operat. 2</p>
+            </div>
+            <div class="course" data-prereq="Redes 1">
+                <h3>Taller de Redes</h3>
+                <p class="prereq-info">Requiere: Redes 1</p>
+            </div>
+            <div class="course" data-prereq="Redes 1">
+                <h3>Redes 2</h3>
+                <p class="prereq-info">Requiere: Redes 1</p>
+            </div>
+            <div class="course" data-prereq="Redes 1, Sis. de Compu 1">
+                <h3>Leg. Redes. Comp.</h3>
+                <p class="prereq-info">Requiere: Redes 1, Sis. de Compu 1</p>
+            </div>
+            <div class="course" data-prereq="Sis. de Compu 1">
+                <h3>Sis. de Compu 2</h3>
+                <p class="prereq-info">Requiere: Sis. de Compu 1</p>
+            </div>
+        </section>
+
+        <section class="semester">
+            <h2>9° Semestre</h2>
+            <div class="course" data-prereq="Prep. Eval. Proy., Taller de Redes, Redes 2, Leg. Redes. Comp., Sis. de Compu 2">
+                <h3>Tall. de Grado 1</h3>
+                <p class="prereq-info">Requiere: Prep. Eval. Proy., Taller de Redes, Redes 2, Leg. Redes. Comp., Sis. de Compu 2</p>
+            </div>
+            <div class="course" data-prereq="Prep. Eval. Proy., Taller de Redes, Redes 2, Leg. Redes. Comp., Sis. de Compu 2">
+                <h3>Tecnologías Web</h3>
+                <p class="prereq-info">Requiere: Prep. Eval. Proy., Taller de Redes, Redes 2, Leg. Redes. Comp., Sis. de Compu 2</p>
+            </div>
+            <div class="course" data-prereq="Prep. Eval. Proy., Taller de Redes, Redes 2, Leg. Redes. Comp., Sis. de Compu 2">
+                <h3>Gest. Adm. Red.</h3>
+                <p class="prereq-info">Requiere: Prep. Eval. Proy., Taller de Redes, Redes 2, Leg. Redes. Comp., Sis. de Compu 2</p>
+            </div>
+            <div class="course" data-prereq="Prep. Eval. Proy., Taller de Redes, Redes 2, Leg. Redes. Comp., Sis. de Compu 2">
+                <h3>Redes Inalámbricas</h3>
+                <p class="prereq-info">Requiere: Prep. Eval. Proy., Taller de Redes, Redes 2, Leg. Redes. Comp., Sis. de Compu 2</p>
+            </div>
+            <div class="course" data-prereq="Prep. Eval. Proy., Taller de Redes, Redes 2, Leg. Redes. Comp., Sis. de Compu 2">
+                <h3>Seguridad en Redes</h3>
+                <p class="prereq-info">Requiere: Prep. Eval. Proy., Taller de Redes, Redes 2, Leg. Redes. Comp., Sis. de Compu 2</p>
+            </div>
+        </section>
+
+        <section class="semester">
+            <h2>10° Semestre</h2>
+            <div class="course" data-prereq="Tall. de Grado 1, Tecnologías Web, Gest. Adm. Red., Redes Inalámbricas, Seguridad en Redes">
+                <h3>MODALIDAD DE TITULACIÓN</h3>
+                <p class="prereq-info">Requiere: Tall. de Grado 1, Tecnologías Web, Gest. Adm. Red., Redes Inalámbricas, Seguridad en Redes</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
